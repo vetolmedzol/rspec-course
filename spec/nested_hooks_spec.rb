@@ -3,12 +3,12 @@ RSpec.describe 'nested hooks' do
     puts 'OUTER before content'
   end
 
-  b efore(:example) do
+  before(:example) do
     puts 'OUTER before example'
   end
 
   it 'does the basic math' do
-    expect(1+1).to eq(2)
+    expect(1 + 1).to eq(2)
   end
 
   context 'with condition A' do
@@ -21,11 +21,11 @@ RSpec.describe 'nested hooks' do
     end
 
     it 'does the more basic math' do
-      expect(2+2).to eq(4)
+      expect(2 + 2).to eq(4)
     end
 
     it 'does the much more basic math' do
-      expect(1*0).to eq(0)
+      expect(1 * 0).to eq(0)
     end
   end
 end

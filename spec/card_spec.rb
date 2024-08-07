@@ -1,5 +1,4 @@
 RSpec.describe Card do
-
   let(:card) { Card.new('Ace', 'Spades') }
 
   it 'has a correct rank and rank can change' do

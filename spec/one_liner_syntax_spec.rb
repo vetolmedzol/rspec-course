@@ -1,5 +1,5 @@
 RSpec.describe 'shorthand syntax' do
-  subject {5}
+  subject { 5 }
 
   context 'with classic syntax' do
     it 'should equal 5' do
