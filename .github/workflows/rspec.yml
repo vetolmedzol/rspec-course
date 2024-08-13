@@ -1,0 +1,28 @@
+name: Run RSpec tests
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.0.2'
+
+      - name: RSpec install
+        run: gem install rspec
+
+      - name: Run tests
+        run: rspec spec
