@@ -21,5 +21,8 @@ jobs:
         with:
           ruby-version: '3.0.2'
 
+      - name: RSpec install
+        run: gem install rspec
+
       - name: Run tests
         run: rspec spec
